@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shopping Cart</title>
+    <link rel="icon" href="logo.png">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"><strong>Online</strong> Shopping</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <a class="list-group-item active cursor-click">Shop by Category
+                    </a>
+                    <ul class="list-group">
+                        <li class="list-group-item cursor-click">
+                            <a>Books & Audible</a>
+                            <span class="label label-primary pull-right" id="category-count-0">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Electronics</a>
+                            <span class="label label-primary pull-right" id="category-count-1">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Household care</a>
+                            <span class="label label-primary pull-right" id="category-count-2">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Snacks and Beverages</a>
+                            <span class="label label-primary pull-right" id="category-count-3">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Home Appliances</a>
+                            <span class="label label-primary pull-right" id="category-count-4">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Mobiles, Computers</a>
+                            <span class="label label-primary pull-right" id="category-count-5">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Women's Fashion</a>
+                            <span class="label label-primary pull-right" id="category-count-6">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Men's Fashion</a>
+                            <span class="label label-primary pull-right" id="category-count-7">0</span>
+                        </li>
+                        <li class="list-group-item cursor-click">
+                            <a>Sports & Fitness</a>
+                            <span class="label label-primary pull-right" id="category-count-8">0</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="well well-lg offer-box offer-colors">
+                    <span class="glyphicon glyphicon-star-empty"></span>25 % off , GRAB IT
+                    <br />
+                    <br />
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            <span class="sr-only">70% Complete (success)</span>
+                            2hr 35 mins left
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a>Home</a></li>
+                        <li class="active">Products</li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-primary space-right space-left">
+                        <span class="glyphicon glyphicon glyphicon-plus"></span> Add Product
+                    </button>
+                    <div class="btn-group alg-right-pad">
+                        <button type="button" class="btn btn-primary space-right">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Checkout <span class="badge badge-light" id="checkout-product-count">0</span>
+                        </button>
+                        <button type="button" class="btn btn-default"><strong id="total-product-count">0 </strong> items</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                Sort Products &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="cursor-click"><a>By Price Low</a></li>
+                                <li class="divider"></li>
+                                <li class="cursor-click"><a>By Price High</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row" id='no-products-found' class="hidden">
+                    <div id="no-products-found-content" class="col-md-12 text-center">
+                        <h3>No Products Found</h3>
+                    </div>
+                </div> -->
+                <div class="row" id='product-list-wrapper' class="show">
+
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="img/soda.png" alt="" />
+                            <div class="caption">
+                                <h3><a> </a></h3>
+                                <p>Price : <strong>&#x20b9; 100</strong> </p>
+                                <p><a class="btn btn-success" role="button">Add To Cart</a> <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#product-detail-model">Edit Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="img/dress.png" alt="" />
+                            <div class="caption">
+                                <h3><a> </a></h3>
+                                <p>Price : <strong>&#x20b9; 2500</strong> </p>
+                                <p><a class="btn btn-success" role="button">Add To Cart</a> <a class="btn btn-primary" role="button" data-toggle="modal" data-target="#product-detail-model">Edit Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 end-box ">
+        &copy; 2019 | &nbsp; FPS Innovation Labs
+    </div>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
